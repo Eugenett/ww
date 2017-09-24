@@ -1,0 +1,64 @@
+.slider{
+	width: 960px;
+	position: relative;
+	padding-top: 480px;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+#slider-button {
+	position: absolute;
+	left: 42%;
+	bottom: 29%;
+	height: 30px;
+	width: 153px;
+	border-radius: 15px;
+	border: none;
+	background: #1f4ba5;
+	color: #f0f3f9;
+	font-family:'Varela Round', sans-serif;
+	font-size: 12px;
+	box-sizing: border-box;
+	text-align: center;
+	cursor: pointer;
+}
+#slider-button:hover {
+	font-size: 15px;
+}
+.btn-cost {
+	font-family: 'Oswald', sans-serif;
+	font-size: 12px;
+	border-right: thin solid #fff;
+	margin-right: 15px;
+	padding-right: 15px;
+}
+.slider>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	opacity: 0.6;
+}
+.slider label img{
+	display: block;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+.slider input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
